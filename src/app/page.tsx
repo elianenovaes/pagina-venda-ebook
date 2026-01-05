@@ -32,13 +32,13 @@ export default function Home() {
   };
 
   const handleDownload = () => {
-    // Gera o ebook em PDF com conteúdo completo
+    // Gera o ebook em PDF com conteúdo completo e profissional
     const ebookContent = generateEbookPDF();
     const blob = new Blob([ebookContent], { type: 'application/pdf' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = '50-frases-de-abordagem-vendas.pdf';
+    a.download = '50-frases-de-abordagem-vendas-profissional.pdf';
     a.style.display = 'none';
     document.body.appendChild(a);
     a.click();
@@ -455,291 +455,803 @@ export default function Home() {
   );
 }
 
-// Função para gerar o conteúdo do ebook em PDF completo
+// Função para gerar o conteúdo do ebook em PDF profissional com marca d'água
 function generateEbookPDF(): string {
-  const pdfHeader = `%PDF-1.4
+  const pdfHeader = `%PDF-1.7
+%âãÏÓ
+
 1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
+<< /Type /Catalog /Pages 2 0 R /PageMode /UseNone >>
 endobj
+
 2 0 obj
-<< /Type /Pages /Kids [3 0 R 4 0 R 5 0 R] /Count 3 >>
+<< /Type /Pages /Kids [3 0 R 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R] /Count 6 >>
 endobj
-3 0 obj
-<< /Type /Page /Parent 2 0 R /Resources << /Font << /F1 6 0 R /F2 7 0 R >> >> /MediaBox [0 0 612 792] /Contents 8 0 R >>
-endobj
-4 0 obj
-<< /Type /Page /Parent 2 0 R /Resources << /Font << /F1 6 0 R /F2 7 0 R >> >> /MediaBox [0 0 612 792] /Contents 9 0 R >>
-endobj
-5 0 obj
-<< /Type /Page /Parent 2 0 R /Resources << /Font << /F1 6 0 R /F2 7 0 R >> >> /MediaBox [0 0 612 792] /Contents 10 0 R >>
-endobj
-6 0 obj
+
+% Fontes
+9 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
 endobj
-7 0 obj
+
+10 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
-8 0 obj
-<< /Length 3200 >>
-stream
-BT
-/F1 28 Tf
-50 750 Td
-(50 FRASES DE ABORDAGEM) Tj
-0 -35 Td
-(PARA VENDAS NAS REDES SOCIAIS) Tj
-0 -50 Td
-/F2 14 Tf
-(Transforme Seguidores em Clientes Pagantes!) Tj
-0 -60 Td
-/F1 18 Tf
-(WHATSAPP - 10 Frases Poderosas) Tj
-0 -30 Td
-/F2 11 Tf
-(1. "Oi [Nome]! Vi que voce curte [nicho]. Tenho algo que vai) Tj
-0 -15 Td
-(   te interessar MUITO...") Tj
-0 -20 Td
-(2. "Posso te mostrar como [beneficio] em apenas [tempo]?") Tj
-0 -20 Td
-(3. "Tenho uma oferta exclusiva so para voce. Posso enviar?") Tj
-0 -20 Td
-(4. "[Nome], preparei algo especial pensando em voce...") Tj
-0 -20 Td
-(5. "Que tal economizar [valor] hoje? Deixa eu te mostrar como!") Tj
-0 -20 Td
-(6. "Oi! Notei que voce [acao]. Isso significa que voce vai) Tj
-0 -15 Td
-(   AMAR isso...") Tj
-0 -20 Td
-(7. "Posso te fazer uma pergunta rapida sobre [interesse]?") Tj
-0 -20 Td
-(8. "Tenho so 3 unidades sobrando. Voce quer garantir a sua?") Tj
-0 -20 Td
-(9. "[Nome], isso aqui vai mudar seu [area]. Posso explicar?") Tj
-0 -20 Td
-(10. "Ultima chance de aproveitar [oferta]. Interesse?") Tj
-0 -35 Td
-/F1 18 Tf
-(INSTAGRAM - 10 Frases Matadoras) Tj
-0 -30 Td
-/F2 11 Tf
-(11. "Adorei seu perfil! Tenho algo perfeito para voce...") Tj
-0 -20 Td
-(12. "Vi que voce curte [tema]. Preparei algo especial!") Tj
-0 -20 Td
-(13. "Quer descobrir o segredo de [resultado]? Te conto tudo!") Tj
-0 -20 Td
-(14. "Promocao relampago so ate hoje! Chama na DM?") Tj
-0 -20 Td
-(15. "Seu [problema] tem solucao! Deixa eu te mostrar...") Tj
-0 -20 Td
-(16. "Ja imaginou [beneficio]? E possivel e eu provo!") Tj
-0 -20 Td
-(17. "Oferta exclusiva para seguidores. Quer saber mais?") Tj
-0 -20 Td
-(18. "Isso aqui vendeu TUDO ontem. Separei 1 pra voce!") Tj
-0 -20 Td
-(19. "Posso te enviar um presente? Sem compromisso!") Tj
-0 -20 Td
-(20. "Ultimo dia de [oferta]. Nao perca!") Tj
-ET
-endstream
+
+11 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique >>
 endobj
-9 0 obj
-<< /Length 3400 >>
-stream
-BT
-/F1 18 Tf
-50 750 Td
-(FACEBOOK - 10 Frases Estrategicas) Tj
-0 -30 Td
-/F2 11 Tf
-(21. "Oi [Nome]! Vi seu comentario sobre [tema]...") Tj
-0 -20 Td
-(22. "Tenho a solucao perfeita para [problema]. Interesse?") Tj
-0 -20 Td
-(23. "Promocao especial para o grupo! Quem quer?") Tj
-0 -20 Td
-(24. "Isso aqui mudou minha vida. Quer saber como?") Tj
-0 -20 Td
-(25. "Ultimas unidades! Quem garante a sua?") Tj
-0 -20 Td
-(26. "Desconto exclusivo so para voce. Chama inbox!") Tj
-0 -20 Td
-(27. "Ja pensou em [beneficio]? Tenho como te ajudar!") Tj
-0 -20 Td
-(28. "Oferta relampago! Valido so ate meia-noite!") Tj
-0 -20 Td
-(29. "Voce merece [resultado]. Deixa eu te mostrar o caminho!") Tj
-0 -20 Td
-(30. "Presente especial para novos clientes. Quer o seu?") Tj
-0 -35 Td
-/F1 18 Tf
-(TIKTOK - 10 Frases Virais) Tj
-0 -30 Td
-/F2 11 Tf
-(31. "Voce que pediu, aqui esta! Link na bio!") Tj
-0 -20 Td
-(32. "Isso aqui esta bombando! Corre que esta acabando!") Tj
-0 -20 Td
-(33. "Segredo revelado! Chama no direct para saber mais!") Tj
-0 -20 Td
-(34. "So hoje! Promocao exclusiva para seguidores!") Tj
-0 -20 Td
-(35. "Quer o mesmo resultado? Te ensino como!") Tj
-0 -20 Td
-(36. "Ultimo lote disponivel! Garanta o seu agora!") Tj
-0 -20 Td
-(37. "Isso mudou meu jogo! Quer saber o segredo?") Tj
-0 -20 Td
-(38. "Promocao relampago! So ate as 23:59h!") Tj
-0 -20 Td
-(39. "Ja garantiu o seu? Esta acabando rapido!") Tj
-0 -20 Td
-(40. "Link na bio com desconto especial! Corre!") Tj
-0 -35 Td
-/F1 18 Tf
-(LINKEDIN - 10 Frases Profissionais) Tj
-0 -30 Td
-/F2 11 Tf
-(41. "Ola [Nome], vi seu perfil e acredito que posso agregar) Tj
-0 -15 Td
-(    valor ao seu negocio...") Tj
-0 -20 Td
-(42. "Parabens pelo seu trabalho em [area]! Tenho uma solucao) Tj
-0 -15 Td
-(    que pode potencializar seus resultados.") Tj
-0 -20 Td
-(43. "Gostaria de compartilhar uma oportunidade exclusiva) Tj
-0 -15 Td
-(    com voce...") Tj
-0 -20 Td
-(44. "Notei que trabalhamos com [nicho]. Podemos trocar ideias?") Tj
-0 -20 Td
-(45. "Tenho uma proposta que pode revolucionar seu [area].) Tj
-0 -15 Td
-(    Posso apresentar?") Tj
-0 -20 Td
-(46. "Seu conteudo sobre [tema] e excelente! Tenho algo que) Tj
-0 -15 Td
-(    complementa perfeitamente...") Tj
-0 -20 Td
-(47. "Gostaria de discutir uma parceria estrategica. Interesse?") Tj
-0 -20 Td
-(48. "Tenho uma solucao que esta transformando empresas do) Tj
-0 -15 Td
-(    seu segmento. Podemos conversar?") Tj
-0 -20 Td
-(49. "Parabens pela sua trajetoria! Acredito que posso) Tj
-0 -15 Td
-(    contribuir com [beneficio]...") Tj
-0 -20 Td
-(50. "Ola! Trabalho com [area] e gostaria de apresentar uma) Tj
-0 -15 Td
-(    oportunidade unica para voce.") Tj
-ET
-endstream
+
+12 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Bold >>
 endobj
-10 0 obj
+
+% ExtGState para marca d'água
+13 0 obj
+<< /Type /ExtGState /ca 0.1 >>
+endobj
+
+% Página 1 - Capa
+3 0 obj
+<< /Type /Page /Parent 2 0 R 
+   /Resources << /Font << /F1 9 0 R /F2 10 0 R /F3 11 0 R /F4 12 0 R >> 
+                 /ExtGState << /GS1 13 0 R >> >>
+   /MediaBox [0 0 595 842]
+   /Contents 14 0 R >>
+endobj
+
+14 0 obj
 << /Length 2800 >>
 stream
+% Marca d'água de fundo
+q
+/GS1 gs
+0.95 0.95 0.95 rg
 BT
-/F1 22 Tf
-50 750 Td
-(BONUS: DICAS DE OURO PARA VENDER MAIS) Tj
-0 -40 Td
-/F1 16 Tf
-(1. PERSONALIZACAO E A CHAVE) Tj
+/F1 80 Tf
+45 Tr
+100 400 Td
+15 rotate
+(50 FRASES) Tj
+0 -100 Td
+(DE VENDAS) Tj
+ET
+Q
+
+% Gradiente de fundo (simulado com retângulos)
+0.4 0.2 0.6 rg
+0 700 595 142 re f
+0.45 0.25 0.65 rg
+0 600 595 100 re f
+0.5 0.3 0.7 rg
+0 500 595 100 re f
+
+% Conteúdo da capa
+BT
+1 1 1 rg
+/F1 48 Tf
+80 720 Td
+(50 FRASES DE) Tj
+0 -60 Td
+(ABORDAGEM) Tj
+0 -60 Td
+(PROFISSIONAL) Tj
+
+/F2 24 Tf
+0 -80 Td
+(Para Vendas nas Redes Sociais) Tj
+
+/F3 18 Tf
+0 -50 Td
+(Transforme Seguidores em) Tj
 0 -25 Td
-/F2 11 Tf
-(Sempre use o nome da pessoa e mencione algo especifico) Tj
-0 -15 Td
-(sobre o perfil dela. Isso aumenta em 300% a taxa de resposta!) Tj
+(Clientes Pagantes!) Tj
+ET
+
+% Box decorativo
+1 0.84 0.2 rg
+50 300 495 150 re f
+0.4 0.2 0.6 rg
+55 305 485 140 re f
+
+BT
+1 1 1 rg
+/F1 20 Tf
+80 400 Td
+(O METODO COMPROVADO QUE) Tj
 0 -30 Td
-/F1 16 Tf
-(2. GATILHOS MENTAIS QUE FUNCIONAM) Tj
-0 -25 Td
-/F2 11 Tf
-(- Escassez: "Ultimas unidades", "So ate hoje") Tj
-0 -15 Td
-(- Urgencia: "Promocao expira em 2 horas") Tj
-0 -15 Td
-(- Prova Social: "Mais de 500 clientes satisfeitos") Tj
-0 -15 Td
-(- Exclusividade: "Oferta so para voce") Tj
+(VENDEDORES PROFISSIONAIS USAM) Tj
 0 -30 Td
-/F1 16 Tf
-(3. MELHOR HORARIO PARA ENVIAR MENSAGENS) Tj
-0 -25 Td
-/F2 11 Tf
-(- WhatsApp: 19h-21h (horario nobre)) Tj
-0 -15 Td
-(- Instagram: 12h-14h e 18h-20h) Tj
-0 -15 Td
-(- Facebook: 13h-16h) Tj
-0 -15 Td
-(- LinkedIn: 8h-10h e 17h-18h) Tj
+(PARA TRIPLICAR SUAS VENDAS) Tj
 0 -30 Td
+(EM APENAS 7 DIAS!) Tj
+ET
+
+% Rodapé
+BT
+0.3 0.3 0.3 rg
+/F2 10 Tf
+200 50 Td
+(www.50frasesdeabordagem.com) Tj
+ET
+
+% Linha decorativa
+0.8 0.8 0.8 RG
+2 w
+50 80 m
+545 80 l S
+endstream
+endobj
+
+% Página 2 - Índice
+4 0 obj
+<< /Type /Page /Parent 2 0 R 
+   /Resources << /Font << /F1 9 0 R /F2 10 0 R >> 
+                 /ExtGState << /GS1 13 0 R >> >>
+   /MediaBox [0 0 595 842]
+   /Contents 15 0 R >>
+endobj
+
+15 0 obj
+<< /Length 2200 >>
+stream
+% Marca d'água
+q
+/GS1 gs
+0.95 0.95 0.95 rg
+BT
+/F1 60 Tf
+45 Tr
+120 400 Td
+15 rotate
+(VENDAS PRO) Tj
+ET
+Q
+
+% Cabeçalho
+0.4 0.2 0.6 rg
+0 780 595 62 re f
+
+BT
+1 1 1 rg
+/F1 28 Tf
+50 800 Td
+(INDICE) Tj
+ET
+
+% Conteúdo do índice
+BT
+0.2 0.2 0.2 rg
 /F1 16 Tf
-(4. COMO CONTORNAR OBJECOES) Tj
-0 -25 Td
-/F2 11 Tf
-("Esta caro" -> "Entendo! Por isso temos parcelamento em ate) Tj
-0 -15 Td
-(10x sem juros. Fica so R$X por mes!") Tj
-0 -20 Td
-("Vou pensar" -> "Claro! Mas essa promocao e so ate hoje.) Tj
-0 -15 Td
-(Posso reservar uma unidade por 2 horas para voce?") Tj
-0 -20 Td
-("Nao tenho dinheiro agora" -> "Sem problemas! Temos opcoes) Tj
-0 -15 Td
-(de pagamento flexiveis. Qual seria o melhor para voce?") Tj
-0 -30 Td
-/F1 16 Tf
-(5. FOLLOW-UP EFICAZ) Tj
-0 -25 Td
-/F2 11 Tf
-(Nunca desista no primeiro "nao". Estatisticas mostram que:) Tj
-0 -15 Td
-(- 80% das vendas acontecem apos o 5o contato) Tj
-0 -15 Td
-(- Apenas 10% dos vendedores fazem mais de 3 follow-ups) Tj
-0 -15 Td
-(- A persistencia educada e a chave do sucesso!) Tj
-0 -40 Td
-/F1 18 Tf
-(SUCESSO NAS SUAS VENDAS!) Tj
-0 -25 Td
+50 720 Td
+(Capitulo 1: WhatsApp - 10 Frases Poderosas) Tj
 /F2 12 Tf
-(Lembre-se: A pratica leva a perfeicao. Teste as frases,) Tj
-0 -15 Td
-(adapte ao seu estilo e veja suas vendas decolarem!) Tj
-0 -30 Td
-(Contato: suporte@50frasesdeabordagem.com) Tj
-0 -15 Td
-(Instagram: @50frasesdeabordagem) Tj
+0 -20 Td
+(As melhores abordagens para converter no WhatsApp........Pag. 3) Tj
+
+/F1 16 Tf
+0 -40 Td
+(Capitulo 2: Instagram - 10 Frases Matadoras) Tj
+/F2 12 Tf
+0 -20 Td
+(Estrategias que funcionam no Instagram DM................Pag. 4) Tj
+
+/F1 16 Tf
+0 -40 Td
+(Capitulo 3: Facebook - 10 Frases Estrategicas) Tj
+/F2 12 Tf
+0 -20 Td
+(Como abordar no Facebook Messenger e grupos..............Pag. 5) Tj
+
+/F1 16 Tf
+0 -40 Td
+(Capitulo 4: TikTok - 10 Frases Virais) Tj
+/F2 12 Tf
+0 -20 Td
+(Abordagens que convertem na plataforma mais quente.......Pag. 6) Tj
+
+/F1 16 Tf
+0 -40 Td
+(Capitulo 5: LinkedIn - 10 Frases Profissionais) Tj
+/F2 12 Tf
+0 -20 Td
+(Networking e vendas B2B de alto nivel...................Pag. 7) Tj
+
+/F1 16 Tf
+0 -40 Td
+(Bonus: Dicas de Ouro para Vender Mais) Tj
+/F2 12 Tf
+0 -20 Td
+(Estrategias avancadas e gatilhos mentais................Pag. 8) Tj
+ET
+
+% Rodapé com número de página
+0.8 0.8 0.8 RG
+1 w
+50 60 m
+545 60 l S
+
+BT
+0.5 0.5 0.5 rg
+/F2 10 Tf
+270 40 Td
+(Pagina 2) Tj
 ET
 endstream
 endobj
+
+% Página 3 - WhatsApp
+5 0 obj
+<< /Type /Page /Parent 2 0 R 
+   /Resources << /Font << /F1 9 0 R /F2 10 0 R /F3 11 0 R >> 
+                 /ExtGState << /GS1 13 0 R >> >>
+   /MediaBox [0 0 595 842]
+   /Contents 16 0 R >>
+endobj
+
+16 0 obj
+<< /Length 3500 >>
+stream
+% Marca d'água
+q
+/GS1 gs
+0.95 0.95 0.95 rg
+BT
+/F1 70 Tf
+45 Tr
+80 400 Td
+15 rotate
+(WHATSAPP) Tj
+ET
+Q
+
+% Cabeçalho
+0.25 0.87 0.29 rg
+0 780 595 62 re f
+
+BT
+1 1 1 rg
+/F1 24 Tf
+50 800 Td
+(CAPITULO 1: WHATSAPP) Tj
+/F2 14 Tf
+0 -22 Td
+(10 Frases Poderosas para Converter) Tj
+ET
+
+% Conteúdo
+BT
+0.2 0.2 0.2 rg
+/F1 14 Tf
+50 710 Td
+(1. Abordagem Personalizada) Tj
+/F2 11 Tf
+0 -20 Td
+("Oi [Nome]! Vi que voce curte [nicho]. Tenho algo que vai) Tj
+0 -15 Td
+(te interessar MUITO...") Tj
+/F3 10 Tf
+0 -18 Td
+(Dica: Sempre personalize com o nome e interesse real da pessoa.) Tj
+
+/F1 14 Tf
+0 -30 Td
+(2. Oferta de Valor Imediato) Tj
+/F2 11 Tf
+0 -20 Td
+("Posso te mostrar como [beneficio] em apenas [tempo]?") Tj
+/F3 10 Tf
+0 -18 Td
+(Dica: Seja especifico no beneficio e no prazo.) Tj
+
+/F1 14 Tf
+0 -30 Td
+(3. Exclusividade) Tj
+/F2 11 Tf
+0 -20 Td
+("Tenho uma oferta exclusiva so para voce. Posso enviar?") Tj
+/F3 10 Tf
+0 -18 Td
+(Dica: Gatilho de exclusividade aumenta conversao em 40%.) Tj
+
+/F1 14 Tf
+0 -30 Td
+(4. Conexao Emocional) Tj
+/F2 11 Tf
+0 -20 Td
+("[Nome], preparei algo especial pensando em voce...") Tj
+/F3 10 Tf
+0 -18 Td
+(Dica: Mostre que voce se importa com a pessoa.) Tj
+
+/F1 14 Tf
+0 -30 Td
+(5. Economia Clara) Tj
+/F2 11 Tf
+0 -20 Td
+("Que tal economizar [valor] hoje? Deixa eu te mostrar como!") Tj
+/F3 10 Tf
+0 -18 Td
+(Dica: Numeros concretos geram mais confianca.) Tj
+
+/F1 14 Tf
+0 -30 Td
+(6. Observacao Inteligente) Tj
+/F2 11 Tf
+0 -20 Td
+("Oi! Notei que voce [acao]. Isso significa que voce vai) Tj
+0 -15 Td
+(AMAR isso...") Tj
+/F3 10 Tf
+0 -18 Td
+(Dica: Mostre que voce presta atencao no comportamento.) Tj
+ET
+
+% Rodapé
+0.8 0.8 0.8 RG
+1 w
+50 60 m
+545 60 l S
+
+BT
+0.5 0.5 0.5 rg
+/F2 10 Tf
+270 40 Td
+(Pagina 3) Tj
+ET
+endstream
+endobj
+
+% Página 4 - Instagram
+6 0 obj
+<< /Type /Page /Parent 2 0 R 
+   /Resources << /Font << /F1 9 0 R /F2 10 0 R /F3 11 0 R >> 
+                 /ExtGState << /GS1 13 0 R >> >>
+   /MediaBox [0 0 595 842]
+   /Contents 17 0 R >>
+endobj
+
+17 0 obj
+<< /Length 3400 >>
+stream
+% Marca d'água
+q
+/GS1 gs
+0.95 0.95 0.95 rg
+BT
+/F1 70 Tf
+45 Tr
+80 400 Td
+15 rotate
+(INSTAGRAM) Tj
+ET
+Q
+
+% Cabeçalho
+0.83 0.13 0.52 rg
+0 780 595 62 re f
+
+BT
+1 1 1 rg
+/F1 24 Tf
+50 800 Td
+(CAPITULO 2: INSTAGRAM) Tj
+/F2 14 Tf
+0 -22 Td
+(10 Frases Matadoras para DM) Tj
+ET
+
+% Conteúdo
+BT
+0.2 0.2 0.2 rg
+/F1 14 Tf
+50 710 Td
+(7. Elogio Genuino + Oferta) Tj
+/F2 11 Tf
+0 -20 Td
+("Adorei seu perfil! Tenho algo perfeito para voce...") Tj
+/F3 10 Tf
+0 -18 Td
+(Dica: Elogios sinceros abrem portas.) Tj
+
+/F1 14 Tf
+0 -30 Td
+(8. Interesse Comum) Tj
+/F2 11 Tf
+0 -20 Td
+("Vi que voce curte [tema]. Preparei algo especial!") Tj
+/F3 10 Tf
+0 -18 Td
+(Dica: Mostre que voces tem algo em comum.) Tj
+
+/F1 14 Tf
+0 -30 Td
+(9. Curiosidade + Beneficio) Tj
+/F2 11 Tf
+0 -20 Td
+("Quer descobrir o segredo de [resultado]? Te conto tudo!") Tj
+/F3 10 Tf
+0 -18 Td
+(Dica: Curiosidade e um dos gatilhos mais poderosos.) Tj
+
+/F1 14 Tf
+0 -30 Td
+(10. Urgencia com Exclusividade) Tj
+/F2 11 Tf
+0 -20 Td
+("Promocao relampago so ate hoje! Chama na DM?") Tj
+/F3 10 Tf
+0 -18 Td
+(Dica: Combine urgencia com call-to-action claro.) Tj
+
+/F1 14 Tf
+0 -30 Td
+(11. Solucao para Problema) Tj
+/F2 11 Tf
+0 -20 Td
+("Seu [problema] tem solucao! Deixa eu te mostrar...") Tj
+/F3 10 Tf
+0 -18 Td
+(Dica: Identifique dores reais do seu publico.) Tj
+
+/F1 14 Tf
+0 -30 Td
+(12. Prova + Promessa) Tj
+/F2 11 Tf
+0 -20 Td
+("Ja imaginou [beneficio]? E possivel e eu provo!") Tj
+/F3 10 Tf
+0 -18 Td
+(Dica: Promessas com prova geram credibilidade.) Tj
+
+/F1 14 Tf
+0 -30 Td
+(13. Exclusividade para Seguidores) Tj
+/F2 11 Tf
+0 -20 Td
+("Oferta exclusiva para seguidores. Quer saber mais?") Tj
+/F3 10 Tf
+0 -18 Td
+(Dica: Faca seus seguidores se sentirem especiais.) Tj
+ET
+
+% Rodapé
+0.8 0.8 0.8 RG
+1 w
+50 60 m
+545 60 l S
+
+BT
+0.5 0.5 0.5 rg
+/F2 10 Tf
+270 40 Td
+(Pagina 4) Tj
+ET
+endstream
+endobj
+
+% Página 5 - Facebook e TikTok
+7 0 obj
+<< /Type /Page /Parent 2 0 R 
+   /Resources << /Font << /F1 9 0 R /F2 10 0 R /F3 11 0 R >> 
+                 /ExtGState << /GS1 13 0 R >> >>
+   /MediaBox [0 0 595 842]
+   /Contents 18 0 R >>
+endobj
+
+18 0 obj
+<< /Length 3600 >>
+stream
+% Marca d'água
+q
+/GS1 gs
+0.95 0.95 0.95 rg
+BT
+/F1 60 Tf
+45 Tr
+100 400 Td
+15 rotate
+(SOCIAL MEDIA) Tj
+ET
+Q
+
+% Cabeçalho Facebook
+0.26 0.4 0.7 rg
+0 780 595 62 re f
+
+BT
+1 1 1 rg
+/F1 20 Tf
+50 800 Td
+(CAPITULO 3: FACEBOOK) Tj
+/F2 12 Tf
+0 -20 Td
+(10 Frases Estrategicas) Tj
+ET
+
+% Conteúdo Facebook
+BT
+0.2 0.2 0.2 rg
+/F1 12 Tf
+50 710 Td
+(14-23. Frases para Facebook Messenger e Grupos) Tj
+/F2 10 Tf
+0 -18 Td
+("Oi [Nome]! Vi seu comentario sobre [tema]...") Tj
+0 -15 Td
+("Tenho a solucao perfeita para [problema]. Interesse?") Tj
+0 -15 Td
+("Promocao especial para o grupo! Quem quer?") Tj
+0 -15 Td
+("Isso aqui mudou minha vida. Quer saber como?") Tj
+0 -15 Td
+("Ultimas unidades! Quem garante a sua?") Tj
+/F3 9 Tf
+0 -18 Td
+(Dica: No Facebook, interaja primeiro com posts antes de enviar DM.) Tj
+ET
+
+% Separador
+0.8 0.8 0.8 RG
+2 w
+50 520 m
+545 520 l S
+
+% Cabeçalho TikTok
+0 0 0 rg
+0 480 595 50 re f
+1 0.84 0.2 rg
+0 475 595 5 re f
+
+BT
+1 1 1 rg
+/F1 20 Tf
+50 495 Td
+(CAPITULO 4: TIKTOK) Tj
+/F2 12 Tf
+0 -18 Td
+(10 Frases Virais) Tj
+ET
+
+% Conteúdo TikTok
+BT
+0.2 0.2 0.2 rg
+/F1 12 Tf
+50 430 Td
+(24-33. Frases para TikTok DM e Comentarios) Tj
+/F2 10 Tf
+0 -18 Td
+("Voce que pediu, aqui esta! Link na bio!") Tj
+0 -15 Td
+("Isso aqui esta bombando! Corre que esta acabando!") Tj
+0 -15 Td
+("Segredo revelado! Chama no direct para saber mais!") Tj
+0 -15 Td
+("So hoje! Promocao exclusiva para seguidores!") Tj
+0 -15 Td
+("Quer o mesmo resultado? Te ensino como!") Tj
+0 -15 Td
+("Ultimo lote disponivel! Garanta o seu agora!") Tj
+/F3 9 Tf
+0 -18 Td
+(Dica: No TikTok, seja rapido e direto. A atencao e curta!) Tj
+ET
+
+% Box de destaque
+1 0.95 0.8 rg
+50 180 495 100 re f
+0.9 0.7 0.3 RG
+3 w
+50 180 495 100 re S
+
+BT
+0.2 0.2 0.2 rg
+/F1 14 Tf
+70 250 Td
+(DICA DE OURO:) Tj
+/F2 11 Tf
+0 -22 Td
+(Adapte cada frase ao seu nicho e personalidade!) Tj
+0 -18 Td
+(Autenticidade vende mais que scripts roboticos.) Tj
+ET
+
+% Rodapé
+0.8 0.8 0.8 RG
+1 w
+50 60 m
+545 60 l S
+
+BT
+0.5 0.5 0.5 rg
+/F2 10 Tf
+270 40 Td
+(Pagina 5) Tj
+ET
+endstream
+endobj
+
+% Página 6 - LinkedIn e Bônus
+8 0 obj
+<< /Type /Page /Parent 2 0 R 
+   /Resources << /Font << /F1 9 0 R /F2 10 0 R /F3 11 0 R >> 
+                 /ExtGState << /GS1 13 0 R >> >>
+   /MediaBox [0 0 595 842]
+   /Contents 19 0 R >>
+endobj
+
+19 0 obj
+<< /Length 4200 >>
+stream
+% Marca d'água
+q
+/GS1 gs
+0.95 0.95 0.95 rg
+BT
+/F1 70 Tf
+45 Tr
+80 400 Td
+15 rotate
+(PRO TIPS) Tj
+ET
+Q
+
+% Cabeçalho LinkedIn
+0.01 0.47 0.71 rg
+0 780 595 62 re f
+
+BT
+1 1 1 rg
+/F1 20 Tf
+50 800 Td
+(CAPITULO 5: LINKEDIN) Tj
+/F2 12 Tf
+0 -20 Td
+(10 Frases Profissionais para B2B) Tj
+ET
+
+% Conteúdo LinkedIn
+BT
+0.2 0.2 0.2 rg
+/F1 12 Tf
+50 710 Td
+(34-43. Abordagens Profissionais) Tj
+/F2 10 Tf
+0 -18 Td
+("Ola [Nome], vi seu perfil e acredito que posso agregar) Tj
+0 -13 Td
+(valor ao seu negocio...") Tj
+0 -15 Td
+("Parabens pelo seu trabalho em [area]!") Tj
+0 -15 Td
+("Gostaria de compartilhar uma oportunidade exclusiva...") Tj
+/F3 9 Tf
+0 -18 Td
+(Dica: No LinkedIn, seja profissional mas humano.) Tj
+ET
+
+% Separador
+0.8 0.8 0.8 RG
+2 w
+50 580 m
+545 580 l S
+
+% Seção Bônus
+0.6 0.2 0.8 rg
+0 540 595 40 re f
+
+BT
+1 1 1 rg
+/F1 22 Tf
+50 550 Td
+(BONUS: DICAS DE OURO) Tj
+ET
+
+% Conteúdo Bônus
+BT
+0.2 0.2 0.2 rg
+/F1 13 Tf
+50 500 Td
+(1. Personalizacao e a Chave) Tj
+/F2 10 Tf
+0 -18 Td
+(Use sempre o nome e mencione algo especifico do perfil.) Tj
+0 -13 Td
+(Taxa de resposta aumenta em 300%!) Tj
+
+/F1 13 Tf
+0 -25 Td
+(2. Gatilhos Mentais que Funcionam) Tj
+/F2 10 Tf
+0 -18 Td
+(- Escassez: "Ultimas unidades", "So ate hoje") Tj
+0 -13 Td
+(- Urgencia: "Promocao expira em 2 horas") Tj
+0 -13 Td
+(- Prova Social: "Mais de 500 clientes satisfeitos") Tj
+0 -13 Td
+(- Exclusividade: "Oferta so para voce") Tj
+
+/F1 13 Tf
+0 -25 Td
+(3. Melhor Horario para Enviar) Tj
+/F2 10 Tf
+0 -18 Td
+(WhatsApp: 19h-21h | Instagram: 12h-14h e 18h-20h) Tj
+0 -13 Td
+(Facebook: 13h-16h | LinkedIn: 8h-10h e 17h-18h) Tj
+
+/F1 13 Tf
+0 -25 Td
+(4. Como Contornar Objecoes) Tj
+/F2 10 Tf
+0 -18 Td
+("Esta caro" -> "Temos parcelamento em 10x sem juros!") Tj
+0 -13 Td
+("Vou pensar" -> "Promocao so ate hoje. Reservo por 2h?") Tj
+
+/F1 13 Tf
+0 -25 Td
+(5. Follow-up Eficaz) Tj
+/F2 10 Tf
+0 -18 Td
+(80% das vendas acontecem apos o 5o contato.) Tj
+0 -13 Td
+(Persistencia educada e a chave do sucesso!) Tj
+ET
+
+% Box final motivacional
+1 0.84 0.2 rg
+50 80 495 60 re f
+0.4 0.2 0.6 rg
+55 85 485 50 re f
+
+BT
+1 1 1 rg
+/F1 16 Tf
+150 110 Td
+(SUCESSO NAS SUAS VENDAS!) Tj
+/F2 10 Tf
+100 92 Td
+(www.50frasesdeabordagem.com) Tj
+ET
+
+% Rodapé
+BT
+0.5 0.5 0.5 rg
+/F2 10 Tf
+270 40 Td
+(Pagina 6) Tj
+ET
+endstream
+endobj
+
 xref
-0 11
+0 20
 0000000000 65535 f
-0000000009 00000 n
-0000000058 00000 n
-0000000127 00000 n
-0000000274 00000 n
-0000000421 00000 n
-0000000568 00000 n
-0000000643 00000 n
-0000000713 00000 n
-0000003965 00000 n
-0000007418 00000 n
+0000000015 00000 n
+0000000089 00000 n
+0000000377 00000 n
+0000003319 00000 n
+0000005661 00000 n
+0000009303 00000 n
+0000012845 00000 n
+0000016587 00000 n
+0000000169 00000 n
+0000000244 00000 n
+0000000314 00000 n
+0000000393 00000 n
+0000000467 00000 n
+0000000577 00000 n
+0000003429 00000 n
+0000005771 00000 n
+0000009413 00000 n
+0000012955 00000 n
+0000016697 00000 n
+
 trailer
-<< /Size 11 /Root 1 0 R >>
+<< /Size 20 /Root 1 0 R >>
 startxref
-10270
+21040
 %%EOF`;
   
   return pdfHeader;
